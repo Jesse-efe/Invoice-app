@@ -4,7 +4,7 @@
     background-color: var(--purple);
     position: relative;
     margin: 0 0 auto 0;
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 2rem 2rem 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@
         height: 50%;
         width: 100%;
         background-color: var(--purple-light);
-        border-radius: 20px 0px 20px 0px;
+        border-radius: 2rem 0px 2rem 0px;
         position: absolute;
         bottom: 0;
     }
