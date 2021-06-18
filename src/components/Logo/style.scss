@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 860px) {
         margin: 0 auto 0 0;
     }
 
@@ -24,7 +24,7 @@
     &__image {
         margin: 0 auto;
         z-index: 2;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 860px) {
             width: 31px;
         }
         @media screen and (max-width: 375px) {

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Home from './pages/Home'
 import Baner from './components/Baner'
+import { InvoiceProvider } from './context/invoice-context'
 import '../src/styles/index.scss'
 
 const App = () => {
@@ -13,7 +14,9 @@ const App = () => {
                     isLightMode={isLightMode}
                 />
                 <div className="main">
-                    <Home />
+                    <InvoiceProvider>
+                        <Home />
+                    </InvoiceProvider>
                 </div>
             </div>
         </div>

@@ -15,11 +15,14 @@
     --baner-sm-side: 10.3rem;
     --purple: #7c5dfa;
     --purple-light: #9277ff;
-    --white: #FFFFFF;
+    --white: #ffffff;
+    --hash-color: #7e88c3;
+    --status-paid-color: #33d69f;
+    --status-pending-color: #ff8f00;
     @media screen and (min-width: 2300px) {
         font-size: 14px; // 1rem = 14px
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 860px) {
         --baner-sm-side: 80px;
     }
     @media screen and (max-width: 375px) {
@@ -35,18 +38,21 @@ body {
 .app--light {
     --baner-color: #373b53;
     --body-color: #f8f8fb;
-    --bold-text-color: #0C0E16;
-    --normal-text-color1: #888EB0;
-    --normal-text-color2: #858BB2;
-    
+    --bold-text-color: #0c0e16;
+    --normal-text-color1: #888eb0;
+    --normal-text-color2: #858bb2;
+    --invoice-color: #ffffff;
+    --status-draft-color: #373b53;
 }
 
 .app--dark {
     --baner-color: #1e2139;
     --body-color: #141625;
-    --bold-text-color: #FFFFFF;
-    --normal-text-color1: #DFE3FA;
-    --normal-text-color2: #FFFFFF;
+    --bold-text-color: #ffffff;
+    --normal-text-color1: #dfe3fa;
+    --normal-text-color2: #ffffff;
+    --invoice-color: #1e2139;
+    --status-draft-color: #dfe3fa;
 }
 
 .container {
@@ -54,7 +60,7 @@ body {
     width: 100vw;
     display: flex;
     background-color: var(--body-color);
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 860px) {
         flex-direction: column;
     }
 }
