@@ -1,3 +1,6 @@
+@import './variables.scss';
+@import './utils.scss';
+
 *,
 *::after,
 *::before {
@@ -10,20 +13,10 @@
     outline: none;
 }
 
-:root {
+html {
     font-size: 10px; // 1rem = 10px
-    --baner-sm-side: 10.3rem;
-    --purple: #7c5dfa;
-    --purple-light: #9277ff;
-    --white: #FFFFFF;
     @media screen and (min-width: 2300px) {
         font-size: 14px; // 1rem = 14px
-    }
-    @media screen and (max-width: 768px) {
-        --baner-sm-side: 80px;
-    }
-    @media screen and (max-width: 375px) {
-        --baner-sm-side: 72px;
     }
 }
 
@@ -32,29 +25,12 @@ body {
     font-family: 'Spartan', sans-serif;
 }
 
-.app--light {
-    --baner-color: #373b53;
-    --body-color: #f8f8fb;
-    --bold-text-color: #0C0E16;
-    --normal-text-color1: #888EB0;
-    --normal-text-color2: #858BB2;
-    
-}
-
-.app--dark {
-    --baner-color: #1e2139;
-    --body-color: #141625;
-    --bold-text-color: #FFFFFF;
-    --normal-text-color1: #DFE3FA;
-    --normal-text-color2: #FFFFFF;
-}
-
 .container {
     height: 100vh;
     width: 100vw;
     display: flex;
     background-color: var(--body-color);
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 860px) {
         flex-direction: column;
     }
 }
@@ -62,4 +38,10 @@ body {
 .main {
     flex: 1;
     background-color: var(--body-color);
+    overflow: scroll;
+    padding-bottom: 4rem;
+}
+
+a {
+    text-decoration: none;
 }

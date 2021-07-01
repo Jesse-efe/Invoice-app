@@ -1,0 +1,79 @@
+.invoice-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.3rem 0 3.2rem;
+    height: 7.2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: -0.25px;
+    position: relative;
+    margin-bottom: 1.6rem;
+    border: 1px solid transparent;
+    @media screen and (max-width: 860px) {
+        padding: 0 2.3rem 0 2.4rem;
+    }
+    @media screen and (max-width: 764px) {
+        height: 134px;
+        flex-direction: column;
+        padding: 24px;
+        padding: 24px 24px 26px 24px;
+        align-items: flex-start;
+
+        .status-box {
+            position: absolute;
+            right: 24px;
+            bottom: 26px;
+            text-align: right;
+        }
+    }
+
+    &:hover {
+        border: 1px solid var(--purple);
+    }
+
+    & > * {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__id {
+        font-weight: 700;
+        width: 6rem;
+        letter-spacing: -0.25px;
+        color: var(--bold-text-color);
+        @media screen and (max-width: 764px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__due-date {
+        color: var(--normal-text-color1);
+        width: 11rem;
+    }
+
+    &__customer {
+        color: var(--normal-text-color2);
+        width: 12rem;
+        text-transform: capitalize;
+        @media screen and (max-width: 764px) {
+            position: absolute;
+            right: 24px;
+            text-align: right;
+        }
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: var(--bold-text-color);
+        width: 11rem;
+        letter-spacing: -0.8px;
+        text-align: right;
+        @media screen and (max-width: 764px) {
+            text-align: left;
+            margin-top: 8px;
+        }
+    }
+}

@@ -1,6 +1,8 @@
 import * as React from 'react'
 import Home from './pages/Home'
+import SingleInvoice from './pages/SingleInvoice'
 import Baner from './components/Baner'
+import { Switch, Route } from 'react-router-dom'
 import '../src/styles/index.scss'
 
 const App = () => {
@@ -13,7 +15,14 @@ const App = () => {
                     isLightMode={isLightMode}
                 />
                 <div className="main">
-                    <Home />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route
+                            exact
+                            path="/:invoiceId"
+                            component={SingleInvoice}
+                        />
+                    </Switch>
                 </div>
             </div>
         </div>
