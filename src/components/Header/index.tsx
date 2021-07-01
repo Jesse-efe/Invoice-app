@@ -16,7 +16,7 @@ const Header = () => {
                 Filter <span className="hide-on-mobile">&nbsp; by ststus</span>
                 <img src={caret} alt="caret" className="header__filter-arrow" />
             </button>
-            <button className="header__add-btn btn" title="create new invoice">
+            <button className="header__add-btn btn btn--purple">
                 <img src={add} alt="plus" className="header__add-btn-icon" />
                 New <span className="hide-on-mobile">&nbsp; Invoice</span>
             </button>

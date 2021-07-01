@@ -1,12 +1,12 @@
 export interface SingleRecord {
     id: string
-    createdAt: Date
-    paymentDue: Date
+    createdAt: string
+    paymentDue: string
     description: string
     paymentTerms: number
     clientName: string
     clientEmail: string
-    status: string
+    status: AllStatus
     senderAddress: Address
     clientAddress: Address
     items: Item[]
@@ -31,6 +31,8 @@ export interface InvoiceItemProps {
     id: string
     paymentDue: string
     clientName: string
-    status: string
+    status: AllStatus
     total: string
 }
+
+export type AllStatus = 'paid' | 'pending' | 'draft'

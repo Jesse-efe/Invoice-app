@@ -1,0 +1,104 @@
+.invoice-details-table {
+    border-radius: 0.8rem 0.8rem 0px 0px;
+    overflow: hidden;
+}
+
+.table-gap > * {
+    height: 4.5rem;
+    vertical-align: top;
+}
+
+.invoice-table {
+    width: 100%;
+    background: var(--grey-button-color);
+    padding: 3.2rem 3.2rem 4rem 3.2rem;
+    @media screen and (max-width: 600px) {
+        padding: 24px;
+    }
+
+    th {
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        letter-spacing: -0.23px;
+    }
+
+    td,
+    td > span {
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: -0.25px;
+        max-width: 10rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    tbody > tr:not(:last-child) {
+        height: 4.5rem;
+        vertical-align: top;
+        @media screen and (max-width: 600px) {
+            height: 62px;
+            td:last-child {
+                padding-top: 13px;
+            }
+        }
+    }
+}
+
+.td-bold {
+    color: var(--bold-text-color);
+}
+
+.data-right {
+    text-align: right;
+    width: 11rem;
+}
+
+.data-left {
+    text-align: left;
+    width: 50%;
+
+    & > span {
+        color: var(--single-invoice-dody-color);
+        margin-top: 0.8rem;
+        display: none;
+        text-transform: lowercase;
+        @media screen and (max-width: 600px) {
+            display: block;
+        }
+    }
+}
+
+.data-center {
+    text-align: center;
+}
+
+.table-bottom {
+    height: 8rem;
+    background-color: var(--single-invoice-bottom-color);
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3.2rem;
+    color: var(--white);
+
+    &__text {
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        letter-spacing: -0.23px;
+    }
+
+    &__value {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        letter-spacing: -0.5px;
+        @media screen and (max-width: 600px) {
+            font-size: 20px;
+        }
+    }
+}

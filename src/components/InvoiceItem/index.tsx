@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { InvoiceItemProps } from '../../types'
+import StatusBox from '../StatusBox'
 import './style.scss'
 
 const InvoiceItem = ({
@@ -9,23 +11,22 @@ const InvoiceItem = ({
     status,
 }: InvoiceItemProps) => {
     return (
-        <div className="invoice-item" key={id}>
-            <div className="invoice-item__id">
-                <span>#</span>
-                {id}
+        <Link to={`/${id}`}>
+            <div className="invoice-item row-box" key={id}>
+                <div className="invoice-item__id">
+                    <span className="id-hash">#</span>
+                    {id}
+                </div>
+                <div className="invoice-item__due-date" title={paymentDue}>
+                    Due {paymentDue}
+                </div>
+                <div className="invoice-item__customer" title={clientName}>
+                    {clientName}
+                </div>
+                <div className="invoice-item__price">£ {total}</div>
+                <StatusBox status={status} />
             </div>
-            <div className="invoice-item__due-date" title={paymentDue}>
-                Due {paymentDue}
-            </div>
-            <div className="invoice-item__customer" title={clientName}>
-                {clientName}
-            </div>
-            <div className="invoice-item__price">£ {total}</div>
-            <div className={`invoice-item__status--${status}`}>
-                <span className="invoice-item__status-dot"></span>
-                {status}
-            </div>
-        </div>
+        </Link>
     )
 }
 

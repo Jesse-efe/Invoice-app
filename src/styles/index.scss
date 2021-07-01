@@ -1,3 +1,6 @@
+@import './variables.scss';
+@import './utils.scss';
+
 *,
 *::after,
 *::before {
@@ -10,49 +13,16 @@
     outline: none;
 }
 
-:root {
+html {
     font-size: 10px; // 1rem = 10px
-    --baner-sm-side: 10.3rem;
-    --purple: #7c5dfa;
-    --purple-light: #9277ff;
-    --white: #ffffff;
-    --hash-color: #7e88c3;
-    --status-paid-color: #33d69f;
-    --status-pending-color: #ff8f00;
     @media screen and (min-width: 2300px) {
         font-size: 14px; // 1rem = 14px
-    }
-    @media screen and (max-width: 860px) {
-        --baner-sm-side: 80px;
-    }
-    @media screen and (max-width: 375px) {
-        --baner-sm-side: 72px;
     }
 }
 
 body {
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
-}
-
-.app--light {
-    --baner-color: #373b53;
-    --body-color: #f8f8fb;
-    --bold-text-color: #0c0e16;
-    --normal-text-color1: #888eb0;
-    --normal-text-color2: #858bb2;
-    --invoice-color: #ffffff;
-    --status-draft-color: #373b53;
-}
-
-.app--dark {
-    --baner-color: #1e2139;
-    --body-color: #141625;
-    --bold-text-color: #ffffff;
-    --normal-text-color1: #dfe3fa;
-    --normal-text-color2: #ffffff;
-    --invoice-color: #1e2139;
-    --status-draft-color: #dfe3fa;
 }
 
 .container {
@@ -68,4 +38,10 @@ body {
 .main {
     flex: 1;
     background-color: var(--body-color);
+    overflow: scroll;
+    padding-bottom: 4rem;
+}
+
+a {
+    text-decoration: none;
 }
